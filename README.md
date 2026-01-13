@@ -47,4 +47,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📩 Contact
 Caine Pavlosky Email: cainepavl@outlook.com
-[Portfolio Website: https://www.pythonanywhere.com/user/surelyNot/] | [LinkedIn]
+[Portfolio Website: https://www.pythonanywhere.com/user/surelyNot/] 
+[LinkedIn: https://linkedin.com/in/cainepavlosky008]
