@@ -26,22 +26,28 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 ### Setup
 1. Clone the repository:
    git clone https://github.com/cainepavl/credential-auditor.git
-   cd credential-auditor
-
+   
+ ```bash
+    cd credential-auditor
+```
 2. Install dependencies:
+   ```bash
    pip install requests colorama
-
+   ```
 ### Execution
 Run the auditor via the terminal:
+ ```bash
 python3 auditor.py
+```
 
 ## 🧪 Testing & Quality Assurance
 This project includes a comprehensive test suite to ensure hashing integrity and API response parsing accuracy.
 
 ### Running Tests
 To execute the automated unit tests, run the following command in your terminal:
+ ```bash
 python3 -m unittest test_auditor.py -v
-
+```
 ## 📖 Technical Workflow
 1. Hashing: The input is encoded and hashed using the SHA-1 algorithm.
 2. Range Query: The first 5 characters are sent to the HIBP "Range" API.
