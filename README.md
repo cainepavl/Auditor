@@ -35,6 +35,13 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 Run the auditor via the terminal:
 python3 auditor.py
 
+## 🧪 Testing & Quality Assurance
+This project includes a comprehensive test suite to ensure hashing integrity and API response parsing accuracy.
+
+### Running Tests
+To execute the automated unit tests, run the following command in your terminal:
+python3 -m unittest test_auditor.py -v
+
 ## 📖 Technical Workflow
 1. Hashing: The input is encoded and hashed using the SHA-1 algorithm.
 2. Range Query: The first 5 characters are sent to the HIBP "Range" API.
