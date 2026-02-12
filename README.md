@@ -2,20 +2,6 @@
 
 A privacy-centric security tool developed in Python to audit passwords against known data breaches. This application utilizes the **Have I Been Pwned (HIBP) API** and implements the **k-Anonymity** model to ensure that sensitive credentials never leave the local environment.
 
-## Table of Contents
-
--[🔒 Security & Privacy Architecture](security-privacy-architecture)
-
--[🛠️ Features](features)
-
--[🚀 Installation & Usage](installation-usage)
-
--[🧪 Testing & Quality Assurance](testing-quality-assurance)
-
--[📜 License](license)
-
--[📩 Contact](contact)
-
 ## 🔒 Security and Privacy Architecture
 
 This project was built with a "Security-First" mindset, focusing on mitigating the risks associated with handling plain-text credentials.
