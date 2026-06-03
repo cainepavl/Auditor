@@ -53,13 +53,13 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/cainepavl/credential-auditor.git
-   cd credential-auditor
+   git clone https://github.com/cainepavl/Auditor.git
+   cd Auditor
    ```
 
 2. Install dependencies:
    ```bash
-   pip install requests colorama
+   pip install -r requirements.txt
    ```
 
 ### Execution
@@ -72,11 +72,26 @@ python3 CredExpoAud.py
 
 ## 🧪 Testing & Quality Assurance
 
-This project includes a test suite to verify hashing integrity and API response parsing accuracy.
+The test suite covers all core logic without making any real network calls — every API interaction is mocked, so tests run fully offline.
 
 ```bash
-python3 -m unittest test.py -v
+python3 -m unittest test -v
 ```
+
+**17 tests across 4 classes:**
+
+| Class | What It Covers |
+|---|---|
+| `TestGetPasswordLeaksCount` | Match found, no match, first/last entry edge cases, empty response, case sensitivity |
+| `TestRequestApiData` | Successful 200 response with correct URL, non-200 raises `RuntimeError` with status code |
+| `TestPwnedApiCheck` | Pwned password returns count, clean password returns 0, prefix length exactly 5, prefix always uppercase |
+| `TestMain` | Empty input aborts cleanly, pwned and clean passwords both complete with exit code 0 |
+
+**Privacy guarantees verified by tests:**
+
+* `test_only_prefix_sent_to_api` — confirms only the first 5 characters of the SHA-1 hash are ever passed to the API. The full hash and plain-text password never leave the local environment.
+* `test_prefix_is_exactly_5_chars` — enforces the 5-character boundary of the k-Anonymity model.
+* `test_hash_prefix_is_uppercase` — confirms the prefix matches the uppercase format required by the HIBP Range API.
 
 ---
 

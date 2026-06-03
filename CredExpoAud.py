@@ -80,7 +80,7 @@ def main():
         print(f'\n{Fore.GREEN}[+] AUDIT PASSED: This password was not found in public datasets.{Style.RESET_ALL}')
     
     print(f"\n{Fore.CYAN}Audit Complete.{Style.RESET_ALL}")
-    return 'DONE'
+    return 0
 
 if __name__ == '__main__':
     try:
