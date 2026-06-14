@@ -18,7 +18,7 @@
 
 <br>
 
-A privacy-centric security tool developed in Python to audit passwords against known data breaches. This application utilizes the **Have I Been Pwned (HIBP) API** and implements the **k-Anonymity** model to ensure that sensitive credentials never leave the local environment.
+A privacy-centric command-line tool for security engineers, sysadmins, and developers who need to audit credentials against known breach data — without sending a password anywhere. Built for people who live in the terminal and want a tool that fits into their existing workflows.
 
 ---
 
@@ -38,6 +38,17 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 * **Cross-Platform UI:** Uses `colorama` for clear, color-coded terminal alerts — Red for compromised, Green for secure.
 * **Input Masking:** Secure prompt handling to prevent shoulder-surfing in office environments.
 * **Graceful Exception Handling:** Designed to exit securely on user interruption (`Ctrl+C`).
+* **Scriptable by design:** No GUI, no dependencies on a display — pipe it, schedule it, wrap it. CLI is the right interface for a security tool.
+
+---
+
+## 💻 Why CLI?
+
+Security tools belong in the terminal. This is an intentional design choice, not a limitation:
+
+* **Audience fit** — sysadmins, security engineers, and developers already work here. A desktop window would get in the way.
+* **Composability** — CLI tools can be scripted, piped, and slotted into audit pipelines. A GUI locks you to point-and-click.
+* **No bloat** — `getpass` and `colorama` are the only UX dependencies. There's nothing to install, configure, or render.
 
 ---
 

@@ -61,7 +61,7 @@ class TestRequestApiData(unittest.TestCase):
         result = CredExpoAud.request_api_data("CBFDA")
         self.assertEqual(result.status_code, 200)
         mock_get.assert_called_once_with(
-            "https://api.pwnedpasswords.com/range/CBFDA"
+            "https://api.pwnedpasswords.com/range/CBFDA", timeout=10
         )
 
     @patch("CredExpoAud.requests.get")

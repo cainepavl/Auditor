@@ -25,7 +25,7 @@ def request_api_data(query_char):
     ensuring the full hash/password never leaves the local environment.
     """
     url = f'https://api.pwnedpasswords.com/range/{query_char}'
-    res = requests.get(url)
+    res = requests.get(url, timeout=10)
     if res.status_code != 200:
        raise RuntimeError(f'API Connection Error: {res.status_code}. Verify network connectivity.')
     return res
@@ -35,7 +35,7 @@ def get_password_leaks_count(hashes, hash_to_check):
     Parses the API response to find a matching suffix and returns the leak frequency.
     """
     # Using a generator expression for memory-efficient string parsing
-    hashes = (line.split(':') for line in hashes.text.splitlines())
+    hashes = (line.split(':', 1) for line in hashes.text.splitlines())
     for h, count in hashes:
         if h == hash_to_check:
             return count
