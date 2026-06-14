@@ -78,6 +78,7 @@ def main():
         print(f'Recommendation: This credential is compromised. Rotate immediately.{Style.RESET_ALL}')
     else:
         print(f'\n{Fore.GREEN}[+] AUDIT PASSED: This password was not found in public datasets.{Style.RESET_ALL}')
+        print(f'{Fore.YELLOW}[~] Note: A clean result means this credential has not appeared in known breach data — it does not assess password strength.{Style.RESET_ALL}')
     
     print(f"\n{Fore.CYAN}Audit Complete.{Style.RESET_ALL}")
     return 0

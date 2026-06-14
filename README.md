@@ -30,6 +30,8 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 * **Zero-Trace Input:** By utilizing the `getpass` module, the tool prevents passwords from being echoed to the terminal screen and ensures they are not logged in the shell's command history (`.bash_history` / `.zsh_history`).
 * **Local Hash Comparison:** The script performs a local comparison of the hash suffix against the API's anonymized response, ensuring 100% privacy from the service provider.
 
+> **Note:** A clean result means this credential has not appeared in known breach data — it does not assess password strength. A password can pass this audit and still be weak.
+
 ---
 
 ## 🛠️ Features
