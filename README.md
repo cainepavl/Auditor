@@ -1,4 +1,4 @@
-# Credential Exposure Auditor
+# 🕵️ Credential Exposure Auditor
 
 <div align="center">
 
@@ -22,6 +22,21 @@ A privacy-centric command-line tool for security engineers, sysadmins, and devel
 
 ---
 
+## 📋 Table of Contents
+
+- [Security and Privacy Architecture](#security-and-privacy-architecture)
+- [Features](#features)
+- [Why CLI?](#why-cli)
+- [Installation](#installation)
+- [WSL (Windows Subsystem for Linux)](#wsl-windows-subsystem-for-linux)
+- [Usage](#usage)
+- [Testing & Quality Assurance](#testing--quality-assurance)
+- [Technical Workflow](#technical-workflow)
+- [License](#license)
+- [Contact/Connect](#contactconnect)
+
+---
+
 ## 🔒 Security and Privacy Architecture
 
 This project was built with a "Security-First" mindset, focusing on mitigating the risks associated with handling plain-text credentials.
@@ -34,7 +49,7 @@ This project was built with a "Security-First" mindset, focusing on mitigating t
 
 ---
 
-## 🛠️ Features
+## ✨ Features
 
 * **Breach Frequency Analysis:** Identifies exactly how many times a credential has appeared in public data leaks.
 * **Cross-Platform UI:** Uses `colorama` for clear, color-coded terminal alerts — Red for compromised, Green for secure.
@@ -54,32 +69,51 @@ Security tools belong in the terminal. This is an intentional design choice, not
 
 ---
 
-## 🚀 Installation & Usage
+## 🛠️ Installation
 
-### Prerequisites
+### 🐍 Verify Python
 
-* Python 3.x
-* `requests`
-* `colorama`
+```bash
+python3 --version
+# Requires Python 3.x
+```
 
-### Setup
+### 📥 Clone the Repository
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/cainepavl/Auditor.git
-   cd Auditor
-   ```
+```bash
+git clone https://github.com/cainepavl/Auditor.git
+cd Auditor
+```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 📦 Virtual Environment (optional)
 
-### Execution
+```bash
+python3 -m venv venv
+source venv/bin/activate      # Linux / macOS / WSL
+# venv\Scripts\activate       # Windows (native CMD)
+```
+
+### ⬇️ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🐧 WSL (Windows Subsystem for Linux)
+
+This tool is pure CLI with no GUI requirements — it runs in WSL without any extra display setup. Simply open a WSL terminal and follow the standard installation steps above.
+
+---
+
+## 🚀 Usage
 
 ```bash
 python3 CredExpoAud.py
 ```
+
+The tool prompts for a password (input is masked — nothing is echoed to the terminal), then checks it against the HIBP Range API and displays the result with color-coded output.
 
 ---
 
@@ -108,7 +142,7 @@ python3 -m unittest test -v
 
 ---
 
-## 📖 Technical Workflow
+## 🔍 Technical Workflow
 
 1. **Hashing** — The input is encoded and hashed using the SHA-1 algorithm.
 2. **Range Query** — The first 5 characters of the hash are sent to the HIBP Range API.
@@ -118,16 +152,16 @@ python3 -m unittest test -v
 
 ---
 
-## 📜 License
+## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📩 Contact
+## 📩 Contact/Connect
 
 **Caine Pavlosky**
 
 * Email: [cainepavl@outlook.com](mailto:cainepavl@outlook.com)
-* Portfolio: [pythonanywhere.com/user/surelyNot](https://www.pythonanywhere.com/user/surelyNot/)
+* Portfolio: [fairdinkumstudios.com](https://fairdinkumstudios.com/)
 * LinkedIn: [linkedin.com/in/cainepavlosky008](https://linkedin.com/in/cainepavlosky008)
