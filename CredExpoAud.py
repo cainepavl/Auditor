@@ -88,5 +88,5 @@ if __name__ == '__main__':
         sys.exit(main())
     except KeyboardInterrupt:
         # Graceful exit on Ctrl+C to avoid messy traceback
-        print(f"\n{Fore.YELLOW}\n[!] Audit cancelled by user.{Style.RESET_ALL}")
+        print(f"\n{Fore.YELLOW}\n[!] Audit canceled by user.{Style.RESET_ALL}")
         sys.exit(0)
